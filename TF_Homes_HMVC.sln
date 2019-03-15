@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28010.2046
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TF_Homes_HMVC", "TF_Homes_HMVC\TF_Homes_HMVC.csproj", "{B9B65464-7A7F-46E4-BB54-758FB7A0E3D2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Model", "Model\Model.csproj", "{507262BF-7143-4199-8524-EB8E160A9808}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B9B65464-7A7F-46E4-BB54-758FB7A0E3D2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B9B65464-7A7F-46E4-BB54-758FB7A0E3D2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B9B65464-7A7F-46E4-BB54-758FB7A0E3D2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B9B65464-7A7F-46E4-BB54-758FB7A0E3D2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{507262BF-7143-4199-8524-EB8E160A9808}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{507262BF-7143-4199-8524-EB8E160A9808}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{507262BF-7143-4199-8524-EB8E160A9808}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{507262BF-7143-4199-8524-EB8E160A9808}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		VisualSVNWorkingCopyRoot = .
+		SolutionGuid = {1FC38306-3478-453C-90D4-89DEEF9A7C4E}
+	EndGlobalSection
+EndGlobal

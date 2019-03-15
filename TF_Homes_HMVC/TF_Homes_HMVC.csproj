@@ -1,0 +1,637 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{B9B65464-7A7F-46E4-BB54-758FB7A0E3D2}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>TF_Homes_HMVC</RootNamespace>
+    <AssemblyName>TF_Homes_HMVC</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http">
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest">
+    </Reference>
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.4\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=5.2.4.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.4\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Optimization">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.4\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.4\lib\net45\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.4\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.4\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.11.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="WebGrease">
+      <Private>True</Private>
+      <HintPath>..\packages\WebGrease.1.6.0\lib\WebGrease.dll</HintPath>
+    </Reference>
+    <Reference Include="Antlr3.Runtime">
+      <Private>True</Private>
+      <HintPath>..\packages\Antlr.3.5.0.2\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="System.Diagnostics.DiagnosticSource">
+      <HintPath>..\packages\System.Diagnostics.DiagnosticSource.4.4.1\lib\net46\System.Diagnostics.DiagnosticSource.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.TelemetryCorrelation">
+      <HintPath>..\packages\Microsoft.AspNet.TelemetryCorrelation.1.0.0\lib\net45\Microsoft.AspNet.TelemetryCorrelation.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ApplicationInsights">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.2.5.1\lib\net46\Microsoft.ApplicationInsights.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AI.Agent.Intercept">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.Agent.Intercept.2.4.0\lib\net45\Microsoft.AI.Agent.Intercept.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AI.DependencyCollector">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.DependencyCollector.2.5.1\lib\net45\Microsoft.AI.DependencyCollector.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AI.PerfCounterCollector">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.PerfCounterCollector.2.5.1\lib\net45\Microsoft.AI.PerfCounterCollector.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AI.ServerTelemetryChannel">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.WindowsServer.TelemetryChannel.2.5.1\lib\net45\Microsoft.AI.ServerTelemetryChannel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AI.WindowsServer">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.WindowsServer.2.5.1\lib\net45\Microsoft.AI.WindowsServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AI.Web">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.Web.2.5.1\lib\net45\Microsoft.AI.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\FYYController.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\indexController.cs" />
+    <Compile Include="Controllers\LKKController.cs" />
+    <Compile Include="Controllers\LYBController.cs" />
+    <Compile Include="Controllers\SYYController.cs" />
+    <Compile Include="Controllers\TYFController.cs" />
+    <Compile Include="Controllers\UserpageController.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="obj\Debug\TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs" />
+    <Compile Include="obj\Debug\TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs" />
+    <Compile Include="obj\Debug\TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="bin\Antlr3.Runtime.dll" />
+    <Content Include="bin\Antlr3.Runtime.pdb" />
+    <Content Include="bin\Microsoft.AI.Agent.Intercept.dll" />
+    <Content Include="bin\Microsoft.AI.DependencyCollector.dll" />
+    <Content Include="bin\Microsoft.AI.DependencyCollector.xml" />
+    <Content Include="bin\Microsoft.AI.PerfCounterCollector.dll" />
+    <Content Include="bin\Microsoft.AI.ServerTelemetryChannel.dll" />
+    <Content Include="bin\Microsoft.AI.Web.dll" />
+    <Content Include="bin\Microsoft.AI.Web.xml" />
+    <Content Include="bin\Microsoft.AI.WindowsServer.dll" />
+    <Content Include="bin\Microsoft.AI.WindowsServer.xml" />
+    <Content Include="bin\Microsoft.ApplicationInsights.dll" />
+    <Content Include="bin\Microsoft.AspNet.TelemetryCorrelation.dll" />
+    <Content Include="bin\Microsoft.AspNet.TelemetryCorrelation.xml" />
+    <Content Include="bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll" />
+    <Content Include="bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml" />
+    <Content Include="bin\Microsoft.Web.Infrastructure.dll" />
+    <Content Include="bin\Newtonsoft.Json.dll" />
+    <Content Include="bin\Newtonsoft.Json.xml" />
+    <Content Include="bin\roslyn\csc.exe" />
+    <Content Include="bin\roslyn\csi.exe" />
+    <Content Include="bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll" />
+    <Content Include="bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll" />
+    <Content Include="bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll" />
+    <Content Include="bin\roslyn\Microsoft.CodeAnalysis.dll" />
+    <Content Include="bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll" />
+    <Content Include="bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll" />
+    <Content Include="bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll" />
+    <Content Include="bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll" />
+    <Content Include="bin\roslyn\System.AppContext.dll" />
+    <Content Include="bin\roslyn\System.Collections.Immutable.dll" />
+    <Content Include="bin\roslyn\System.Console.dll" />
+    <Content Include="bin\roslyn\System.Diagnostics.FileVersionInfo.dll" />
+    <Content Include="bin\roslyn\System.Diagnostics.StackTrace.dll" />
+    <Content Include="bin\roslyn\System.IO.Compression.dll" />
+    <Content Include="bin\roslyn\System.IO.FileSystem.dll" />
+    <Content Include="bin\roslyn\System.IO.FileSystem.Primitives.dll" />
+    <Content Include="bin\roslyn\System.IO.Pipes.AccessControl.dll" />
+    <Content Include="bin\roslyn\System.IO.Pipes.dll" />
+    <Content Include="bin\roslyn\System.Reflection.Metadata.dll" />
+    <Content Include="bin\roslyn\System.Security.AccessControl.dll" />
+    <Content Include="bin\roslyn\System.Security.Claims.dll" />
+    <Content Include="bin\roslyn\System.Security.Cryptography.Algorithms.dll" />
+    <Content Include="bin\roslyn\System.Security.Cryptography.Encoding.dll" />
+    <Content Include="bin\roslyn\System.Security.Cryptography.Primitives.dll" />
+    <Content Include="bin\roslyn\System.Security.Cryptography.X509Certificates.dll" />
+    <Content Include="bin\roslyn\System.Security.Principal.Windows.dll" />
+    <Content Include="bin\roslyn\System.Text.Encoding.CodePages.dll" />
+    <Content Include="bin\roslyn\System.ValueTuple.dll" />
+    <Content Include="bin\roslyn\System.Xml.ReaderWriter.dll" />
+    <Content Include="bin\roslyn\System.Xml.XmlDocument.dll" />
+    <Content Include="bin\roslyn\System.Xml.XPath.dll" />
+    <Content Include="bin\roslyn\System.Xml.XPath.XDocument.dll" />
+    <Content Include="bin\roslyn\vbc.exe" />
+    <Content Include="bin\roslyn\VBCSCompiler.exe" />
+    <Content Include="bin\System.Diagnostics.DiagnosticSource.dll" />
+    <Content Include="bin\System.Diagnostics.DiagnosticSource.xml" />
+    <Content Include="bin\System.Web.Helpers.dll" />
+    <Content Include="bin\System.Web.Helpers.xml" />
+    <Content Include="bin\System.Web.Mvc.dll" />
+    <Content Include="bin\System.Web.Mvc.xml" />
+    <Content Include="bin\System.Web.Optimization.dll" />
+    <Content Include="bin\System.Web.Optimization.xml" />
+    <Content Include="bin\System.Web.Razor.dll" />
+    <Content Include="bin\System.Web.Razor.xml" />
+    <Content Include="bin\System.Web.WebPages.Deployment.dll" />
+    <Content Include="bin\System.Web.WebPages.Deployment.xml" />
+    <Content Include="bin\System.Web.WebPages.dll" />
+    <Content Include="bin\System.Web.WebPages.Razor.dll" />
+    <Content Include="bin\System.Web.WebPages.Razor.xml" />
+    <Content Include="bin\System.Web.WebPages.xml" />
+    <Content Include="bin\TF_Homes_HMVC.dll" />
+    <Content Include="bin\TF_Homes_HMVC.pdb" />
+    <Content Include="bin\WebGrease.dll" />
+    <Content Include="bin\zh-Hans\System.Web.Helpers.resources.dll" />
+    <Content Include="bin\zh-Hans\System.Web.Mvc.resources.dll" />
+    <Content Include="bin\zh-Hans\System.Web.Optimization.resources.dll" />
+    <Content Include="bin\zh-Hans\System.Web.Razor.resources.dll" />
+    <Content Include="bin\zh-Hans\System.Web.WebPages.Deployment.resources.dll" />
+    <Content Include="bin\zh-Hans\System.Web.WebPages.Razor.resources.dll" />
+    <Content Include="bin\zh-Hans\System.Web.WebPages.resources.dll" />
+    <Content Include="Content\bootstrap-theme.css" />
+    <Content Include="Content\bootstrap-theme.min.css" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="css\bootstrap.min.css" />
+    <Content Include="css\flexslider.css" />
+    <Content Include="css\font-awesome.min.css" />
+    <Content Include="css\green.css" />
+    <Content Include="css\jquery-ui.css" />
+    <Content Include="css\jquery.selectBox.css" />
+    <Content Include="css\pace-minimal.css" />
+    <Content Include="css\responsive.css" />
+    <Content Include="css\style.css" />
+    <Content Include="favicon.ico" />
+    <Content Include="fonts\fontawesome-webfont.svg" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Global.asax" />
+    <Content Include="Content\Site.css" />
+    <Content Include="images\about.png" />
+    <Content Include="images\about2.png" />
+    <Content Include="images\accordion-arrow.png" />
+    <Content Include="images\agent-pic.png" />
+    <Content Include="images\arrow-next.png" />
+    <Content Include="images\arrow-prev.png" />
+    <Content Include="images\avatar1.png" />
+    <Content Include="images\avatar2.png" />
+    <Content Include="images\avatar3.png" />
+    <Content Include="images\banner-agent.png" />
+    <Content Include="images\banner-history.png" />
+    <Content Include="images\banner-partners.png" />
+    <Content Include="images\banner-pricing.png" />
+    <Content Include="images\biesu.jpg" />
+    <Content Include="images\biesu1.jpg" />
+    <Content Include="images\biesu3.jpg" />
+    <Content Include="images\check-box-checked.png" />
+    <Content Include="images\check-box.png" />
+    <Content Include="images\comment-icon.png" />
+    <Content Include="images\corner.png" />
+    <Content Include="images\cross.png.html" />
+    <Content Include="images\date-icon.png" />
+    <Content Include="images\drop-arrow.png" />
+    <Content Include="images\element-book.png" />
+    <Content Include="images\element-bus.png" />
+    <Content Include="images\element-market.png" />
+    <Content Include="images\element-school.png" />
+    <Content Include="images\fact1.png" />
+    <Content Include="images\fact2.png" />
+    <Content Include="images\fact3.png" />
+    <Content Include="images\fact4.png" />
+    <Content Include="images\filter-pattren.png" />
+    <Content Include="images\footer-logo.png" />
+    <Content Include="images\g1.png" />
+    <Content Include="images\g10.png" />
+    <Content Include="images\g11.jpg" />
+    <Content Include="images\g12.jpg" />
+    <Content Include="images\g13.jpg" />
+    <Content Include="images\g14.jpg" />
+    <Content Include="images\g15.jpg" />
+    <Content Include="images\g16.jpg" />
+    <Content Include="images\g17.jpg" />
+    <Content Include="images\g18.jpg" />
+    <Content Include="images\g19.jpg" />
+    <Content Include="images\g2.png" />
+    <Content Include="images\g20.jpg" />
+    <Content Include="images\g3.png" />
+    <Content Include="images\g4.png" />
+    <Content Include="images\g5.png" />
+    <Content Include="images\g6.png" />
+    <Content Include="images\g7.png" />
+    <Content Include="images\g8.png" />
+    <Content Include="images\g9.png" />
+    <Content Include="images\gift-design.png" />
+    <Content Include="images\green%402x.png.html" />
+    <Content Include="images\icon-address.png" />
+    <Content Include="images\icon-area.png" />
+    <Content Include="images\icon-bath-w.png" />
+    <Content Include="images\icon-bath.png" />
+    <Content Include="images\icon-bed-w.png" />
+    <Content Include="images\icon-bed.png" />
+    <Content Include="images\icon-car.png" />
+    <Content Include="images\icon-cycle.png" />
+    <Content Include="images\icon-garage.png" />
+    <Content Include="images\icon-gym-w.png" />
+    <Content Include="images\icon-gym.png" />
+    <Content Include="images\icon-kitchen.png" />
+    <Content Include="images\icon-phone.png" />
+    <Content Include="images\icon-pool.png" />
+    <Content Include="images\icon-walk.png" />
+    <Content Include="images\items\1.png" />
+    <Content Include="images\items\10.png" />
+    <Content Include="images\items\11.png" />
+    <Content Include="images\items\12.png" />
+    <Content Include="images\items\2.png" />
+    <Content Include="images\items\3.png" />
+    <Content Include="images\items\4.png" />
+    <Content Include="images\items\5.png" />
+    <Content Include="images\items\6.png" />
+    <Content Include="images\items\7.png" />
+    <Content Include="images\items\8.png" />
+    <Content Include="images\items\9.png" />
+    <Content Include="images\items\BEIjingc.jpg" />
+    <Content Include="images\items\biesu.jpg" />
+    <Content Include="images\items\gouyanb.jpg" />
+    <Content Include="images\jquery.js" />
+    <Content Include="images\logo.png" />
+    <Content Include="images\logo1.png" />
+    <Content Include="images\logo2.png" />
+    <Content Include="images\logo3.png" />
+    <Content Include="images\logo4.png" />
+    <Content Include="images\logo5.png" />
+    <Content Include="images\logo6.png" />
+    <Content Include="images\nearby1.png" />
+    <Content Include="images\nearby2.png" />
+    <Content Include="images\nearby3.png" />
+    <Content Include="images\pattern2.jpg" />
+    <Content Include="images\pixar-logo.png.html" />
+    <Content Include="images\post1.png" />
+    <Content Include="images\post2.png" />
+    <Content Include="images\post3.png" />
+    <Content Include="images\post4.png" />
+    <Content Include="images\post5.png" />
+    <Content Include="images\post6.png" />
+    <Content Include="images\pro-big.jpg" />
+    <Content Include="images\pro-thumb1.jpg" />
+    <Content Include="images\pro-thumb2.jpg" />
+    <Content Include="images\pro-thumb3.jpg" />
+    <Content Include="images\purchase.png.html" />
+    <Content Include="images\qoute-arrow1.png" />
+    <Content Include="images\qoute-arrow2.png" />
+    <Content Include="images\select-arrow.png" />
+    <Content Include="images\service1.png" />
+    <Content Include="images\service2.png" />
+    <Content Include="images\service3.png" />
+    <Content Include="images\service4.png" />
+    <Content Include="images\service5.png" />
+    <Content Include="images\slider-detail.png" />
+    <Content Include="images\slider.jpg" />
+    <Content Include="images\style.css.html" />
+    <Content Include="images\team-single.png" />
+    <Content Include="images\team1.png" />
+    <Content Include="images\team2.png" />
+    <Content Include="images\team3.png" />
+    <Content Include="images\team4.png" />
+    <Content Include="images\team5.png" />
+    <Content Include="images\team6.png" />
+    <Content Include="images\tick.png" />
+    <Content Include="images\zoom.png" />
+    <Content Include="js\bootstrap.min.js" />
+    <Content Include="js\counter.animation.js" />
+    <Content Include="js\custom.js" />
+    <Content Include="js\gmap-properties.js" />
+    <Content Include="js\gmap.js" />
+    <Content Include="js\html5shiv.js" />
+    <Content Include="js\icheck.js" />
+    <Content Include="js\jquery-1.11.3.min.js" />
+    <Content Include="js\jquery-ui.js" />
+    <Content Include="js\jquery.appear.js" />
+    <Content Include="js\jquery.cycle2.js" />
+    <Content Include="js\jquery.flexslider-min.js" />
+    <Content Include="js\jquery.selectBox.min.js" />
+    <Content Include="js\masonry.pkgd.min.js" />
+    <Content Include="js\pace.js" />
+    <Content Include="Loginn\css\style.css" />
+    <Content Include="Loginn\js\index.js" />
+    <Content Include="Login\css\style.css" />
+    <Content Include="Login\images\background01.jpg" />
+    <Content Include="Login\images\background02.jpg" />
+    <Content Include="Login\images\icon_01.png" />
+    <Content Include="Login\images\icon_02.png" />
+    <Content Include="Login\images\icon_dh.png" />
+    <Content Include="Login\images\logo.png" />
+    <Content Include="obj\Debug\TF_Homes_HMVC.csproj.FileListAbsolute.txt" />
+    <Content Include="obj\Debug\TF_Homes_HMVC.dll" />
+    <Content Include="obj\Debug\TF_Homes_HMVC.pdb" />
+    <Content Include="SanJi\js\index.js" />
+    <Content Include="SanJi\js\plugins\angular\angular.min.js" />
+    <Content Include="SanJi\js\plugins\bootstrap\dist\css\bootstrap.min.css" />
+    <Content Include="SanJi\js\plugins\bootstrap\dist\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="SanJi\js\plugins\jquery\dist\jquery.min.js" />
+    <Content Include="SanJi\js\selectAddress1.js" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="ApplicationInsights.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="fonts\fontawesome-webfont.eot" />
+    <Content Include="fonts\fontawesome-webfont.ttf" />
+    <Content Include="fonts\fontawesome-webfont.woff" />
+    <Content Include="fonts\fontawesome-webfont.woff2" />
+    <Content Include="SanJi\js\plugins\bootstrap\dist\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="SanJi\js\plugins\bootstrap\dist\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="SanJi\js\plugins\bootstrap\dist\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="bin\ApplicationInsights.config" />
+    <Content Include="bin\roslyn\csc.exe.config" />
+    <Content Include="bin\roslyn\csc.rsp" />
+    <Content Include="bin\roslyn\csi.exe.config" />
+    <Content Include="bin\roslyn\csi.rsp" />
+    <Content Include="bin\roslyn\Microsoft.CSharp.Core.targets" />
+    <Content Include="bin\roslyn\Microsoft.Managed.Core.targets" />
+    <Content Include="bin\roslyn\Microsoft.VisualBasic.Core.targets" />
+    <Content Include="bin\roslyn\vbc.exe.config" />
+    <Content Include="bin\roslyn\vbc.rsp" />
+    <Content Include="bin\roslyn\VBCSCompiler.exe.config" />
+    <Content Include="bin\TF_Homes_HMVC.dll.config" />
+    <Content Include="obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
+    <Content Include="obj\Debug\TF_Homes_HMVC.csproj.CopyComplete" />
+    <Content Include="obj\Debug\TF_Homes_HMVC.csproj.CoreCompileInputs.cache" />
+    <Content Include="obj\Debug\TF_Homes_HMVC.csprojAssemblyReference.cache" />
+    <Content Include="obj\Debug\TF_Homes_HMVC.csprojResolveAssemblyReference.cache" />
+    <None Include="Scripts\jquery-3.3.1.intellisense.js" />
+    <Content Include="Scripts\jquery-3.3.1.js" />
+    <Content Include="Scripts\jquery-3.3.1.min.js" />
+    <Content Include="Scripts\jquery-3.3.1.slim.js" />
+    <Content Include="Scripts\jquery-3.3.1.slim.min.js" />
+    <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery.validate.js" />
+    <Content Include="Scripts\jquery.validate.min.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\modernizr-2.8.3.js" />
+    <Content Include="template\city.min.js" />
+    <Content Include="template\index.html" />
+    <Content Include="template\twts_142_Ready\assets\css\bootstrap.min.css" />
+    <Content Include="template\twts_142_Ready\assets\css\demo.css" />
+    <Content Include="template\twts_142_Ready\assets\css\ready.css" />
+    <Content Include="template\twts_142_Ready\assets\css\ready.min.css" />
+    <Content Include="template\twts_142_Ready\assets\fonts\line-awesome.svg" />
+    <Content Include="template\twts_142_Ready\assets\img\menu.png" />
+    <Content Include="template\twts_142_Ready\assets\img\menu2.png" />
+    <Content Include="template\twts_142_Ready\assets\img\profile.jpg" />
+    <Content Include="template\twts_142_Ready\assets\img\profile2.jpg" />
+    <Content Include="template\twts_142_Ready\assets\js\core\bootstrap.min.js" />
+    <Content Include="template\twts_142_Ready\assets\js\core\jquery.3.2.1.min.js" />
+    <Content Include="template\twts_142_Ready\assets\js\core\popper.min.js" />
+    <Content Include="template\twts_142_Ready\assets\js\demo.js" />
+    <Content Include="template\twts_142_Ready\assets\js\plugin\bootstrap-notify\bootstrap-notify.min.js" />
+    <Content Include="template\twts_142_Ready\assets\js\plugin\bootstrap-toggle\bootstrap-toggle.min.js" />
+    <Content Include="template\twts_142_Ready\assets\js\plugin\chart-circle\circles.min.js" />
+    <Content Include="template\twts_142_Ready\assets\js\plugin\chartist\chartist.min.js" />
+    <Content Include="template\twts_142_Ready\assets\js\plugin\chartist\plugin\chartist-plugin-tooltip.min.js" />
+    <Content Include="template\twts_142_Ready\assets\js\plugin\jquery-mapael\jquery.mapael.min.js" />
+    <Content Include="template\twts_142_Ready\assets\js\plugin\jquery-mapael\maps\france_departments.js" />
+    <Content Include="template\twts_142_Ready\assets\js\plugin\jquery-mapael\maps\france_departments.min.js" />
+    <Content Include="template\twts_142_Ready\assets\js\plugin\jquery-mapael\maps\README.txt" />
+    <Content Include="template\twts_142_Ready\assets\js\plugin\jquery-mapael\maps\usa_states.js" />
+    <Content Include="template\twts_142_Ready\assets\js\plugin\jquery-mapael\maps\usa_states.min.js" />
+    <Content Include="template\twts_142_Ready\assets\js\plugin\jquery-mapael\maps\world_countries.js" />
+    <Content Include="template\twts_142_Ready\assets\js\plugin\jquery-mapael\maps\world_countries.min.js" />
+    <Content Include="template\twts_142_Ready\assets\js\plugin\jquery-mapael\maps\world_countries_mercator.js" />
+    <Content Include="template\twts_142_Ready\assets\js\plugin\jquery-mapael\maps\world_countries_mercator.min.js" />
+    <Content Include="template\twts_142_Ready\assets\js\plugin\jquery-mapael\maps\world_countries_miller.js" />
+    <Content Include="template\twts_142_Ready\assets\js\plugin\jquery-mapael\maps\world_countries_miller.min.js" />
+    <Content Include="template\twts_142_Ready\assets\js\plugin\jquery-scrollbar\jquery.scrollbar.min.js" />
+    <Content Include="template\twts_142_Ready\assets\js\plugin\jquery-ui-1.12.1.custom\jquery-ui.min.js" />
+    <Content Include="template\twts_142_Ready\assets\js\ready.js" />
+    <Content Include="template\twts_142_Ready\assets\js\ready.min.js" />
+    <Content Include="template\twts_142_Ready\components.html" />
+    <Content Include="template\twts_142_Ready\forms.html" />
+    <Content Include="template\twts_142_Ready\icons.html" />
+    <Content Include="template\twts_142_Ready\index.html" />
+    <Content Include="template\twts_142_Ready\notifications.html" />
+    <Content Include="template\twts_142_Ready\tables.html" />
+    <Content Include="template\twts_142_Ready\typography.html" />
+    <Content Include="template\twts_142_Ready\说明.txt" />
+    <Content Include="Web.config" />
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Views\Web.config" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Shared\Error.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Home\About.cshtml" />
+    <Content Include="Views\Home\Contact.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="template\twts_142_Ready\3000套网站模板免费拥有.url" />
+    <Content Include="template\twts_142_Ready\assets\css\ready.css.map" />
+    <Content Include="template\twts_142_Ready\assets\fonts\line-awesome.eot" />
+    <Content Include="template\twts_142_Ready\assets\fonts\line-awesome.ttf" />
+    <Content Include="template\twts_142_Ready\assets\fonts\line-awesome.woff" />
+    <Content Include="template\twts_142_Ready\assets\fonts\line-awesome.woff2" />
+    <Content Include="template\twts_142_Ready\assets\sass\ready.scss" />
+    <Content Include="template\twts_142_Ready\assets\sass\ready\components\_alerts.scss" />
+    <Content Include="template\twts_142_Ready\assets\sass\ready\components\_badges.scss" />
+    <Content Include="template\twts_142_Ready\assets\sass\ready\components\_buttons.scss" />
+    <Content Include="template\twts_142_Ready\assets\sass\ready\components\_cards.scss" />
+    <Content Include="template\twts_142_Ready\assets\sass\ready\components\_charts.scss" />
+    <Content Include="template\twts_142_Ready\assets\sass\ready\components\_dropdowns.scss" />
+    <Content Include="template\twts_142_Ready\assets\sass\ready\components\_inputs.scss" />
+    <Content Include="template\twts_142_Ready\assets\sass\ready\components\_maps.scss" />
+    <Content Include="template\twts_142_Ready\assets\sass\ready\components\_modals.scss" />
+    <Content Include="template\twts_142_Ready\assets\sass\ready\components\_navbars.scss" />
+    <Content Include="template\twts_142_Ready\assets\sass\ready\components\_navpills.scss" />
+    <Content Include="template\twts_142_Ready\assets\sass\ready\components\_navsearch.scss" />
+    <Content Include="template\twts_142_Ready\assets\sass\ready\components\_paginations.scss" />
+    <Content Include="template\twts_142_Ready\assets\sass\ready\components\_sliders.scss" />
+    <Content Include="template\twts_142_Ready\assets\sass\ready\components\_tables.scss" />
+    <Content Include="template\twts_142_Ready\assets\sass\ready\plugins\_chartist.scss" />
+    <Content Include="template\twts_142_Ready\assets\sass\ready\plugins\_jqueryscrollbar.scss" />
+    <Content Include="template\twts_142_Ready\assets\sass\ready\plugins\_jqueryui.scss" />
+    <Content Include="template\twts_142_Ready\assets\sass\ready\plugins\_toggle.scss" />
+    <Content Include="template\twts_142_Ready\assets\sass\ready\_background.scss" />
+    <Content Include="template\twts_142_Ready\assets\sass\ready\_components.scss" />
+    <Content Include="template\twts_142_Ready\assets\sass\ready\_layouts.scss" />
+    <Content Include="template\twts_142_Ready\assets\sass\ready\_line-awesome.scss" />
+    <Content Include="template\twts_142_Ready\assets\sass\ready\_outlinefocus.scss" />
+    <Content Include="template\twts_142_Ready\assets\sass\ready\_plugins.scss" />
+    <Content Include="template\twts_142_Ready\assets\sass\ready\_responsive.scss" />
+    <Content Include="template\twts_142_Ready\assets\sass\ready\_typography.scss" />
+    <Content Include="template\twts_142_Ready\assets\sass\ready\_variables.scss" />
+    <Content Include="template\twts_142_Ready\找免费网站模板就上【模板之家】cssMoban.com.url" />
+    <Content Include="Views\index\Index.cshtml" />
+    <Content Include="Views\index\Icons.cshtml" />
+    <Content Include="Views\index\Tables.cshtml" />
+    <Content Include="Views\index\Components.cshtml" />
+    <Content Include="Views\index\Forms.cshtml" />
+    <Content Include="Views\index\Notifications.cshtml" />
+    <Content Include="Views\index\Typography.cshtml" />
+    <Content Include="Views\index\Login.cshtml" />
+    <Content Include="Views\Userpage\Index.cshtml" />
+    <Content Include="Views\Userpage\Login.cshtml" />
+    <Content Include="Views\Userpage\Test.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="Models\" />
+    <Folder Include="obj\Debug\TempPE\" />
+    <Folder Include="Views\FYY\" />
+    <Folder Include="Views\LKK\" />
+    <Folder Include="Views\LYB\" />
+    <Folder Include="Views\SYY\" />
+    <Folder Include="Views\TYF\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Content\bootstrap.min.css.map" />
+    <Content Include="Content\bootstrap.css.map" />
+    <Content Include="Content\bootstrap-theme.min.css.map" />
+    <Content Include="Content\bootstrap-theme.css.map" />
+    <None Include="packages.config" />
+    <Content Include="Scripts\jquery-3.3.1.slim.min.map" />
+    <Content Include="Scripts\jquery-3.3.1.min.map" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>51198</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:51198/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>这台计算机上缺少此项目引用的 NuGet 程序包。使用“NuGet 程序包还原”可下载这些程序包。有关更多信息，请参见 http://go.microsoft.com/fwlink/?LinkID=322105。缺少的文件是 {0}。</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+</Project>
